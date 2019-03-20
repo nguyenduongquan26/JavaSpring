@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+  <definition name="bg" template="/template/bg.jsp">
+      <put-attribute name="title"   value="Manage Author"/>
+      <put-attribute name="content" value="/views/author/index.jsp"/>
+  </definition>
+    <definition name="bgauth" template="/template/bgauth.jsp">
+      <put-attribute name="title"   value="Auth"/>
+      <put-attribute name="content" value="/views/auth/index.jsp"/>
+  </definition>
+  <definition name="auth.register" extends="bgauth">
+      <put-attribute name="title"   value="Register"/>
+      <put-attribute name="content" value="/views/auth/register.jsp"/>
+  </definition>
+   <definition name="auth.logon" extends="bgauth">
+      <put-attribute name="title"   value="Log On"/>
+      <put-attribute name="content" value="/views/auth/logon.jsp"/>
+  </definition>
+    <definition name="home" template="/template/bghome.jsp">
+      <put-attribute name="title"   value="Mini Shop"/>
+      <put-attribute name="content" value="/views/home/index.jsp"/>
+  </definition>
+  <definition name="home.detail"  extends="home">
+      <put-attribute name="title"   expression="${o.title}"/>
+      <put-attribute name="content" value="/views/home/detail.jsp"/>
+  </definition>
+    <definition name="home.search"  extends="home">
+      <put-attribute name="title"   expression="${q}"/>
+      <put-attribute name="content" value="/views/home/search.jsp"/>
+  </definition>
+      <definition name="home.browser"  extends="home">
+      <put-attribute name="title"   expression="${o.name}"/>
+      <put-attribute name="content" value="/views/home/browser.jsp"/>
+  </definition>
+  <definition name="author.add" extends="bg">
+  	<put-attribute name="content" value="/views/author/add.jsp"/>
+  </definition>
+  <definition name="author.edit" extends="bg">
+  	<put-attribute name="content" value="/views/author/edit.jsp"/>
+  </definition>
+  <definition name="category.index" extends="bg">
+  	<put-attribute name="title" value="Manage Category"/>
+  	<put-attribute name="content" value="/views/category/index.jsp"/>
+  </definition>
+  <definition name="category.add" extends="bg">
+  	<put-attribute name="title" value="Add Category"/>
+  	<put-attribute name="content" value="/views/category/add.jsp"/>
+  </definition>
+    <definition name="category.add2" extends="bg">
+  	<put-attribute name="title" value="Add Category"/>
+  	<put-attribute name="content" value="/views/category/add2.jsp"/>
+  </definition>
+  <definition name="category.edit" extends="bg">
+  	<put-attribute name="title" value="Edit Category"/>
+  	<put-attribute name="content" value="/views/category/edit.jsp"/>
+  </definition>
+    <definition name="shop" extends="bg">
+  	<put-attribute name="title" value="Shop"/>
+  	<put-attribute name="content" value="/views/shop/index.jsp"/>
+  </definition>
+      <definition name="shop.detail" extends="bg">
+  	<put-attribute name="title" value="Shop"/>
+  	<put-attribute name="content" value="/views/order/detail.jsp"/>
+  </definition>
+   <definition name="category.edit2" extends="bg">
+  	<put-attribute name="title" value="Edit Category"/>
+  	<put-attribute name="content" value="/views/category/edit2.jsp"/>
+  </definition>
+     <definition name="cart.index" extends="home">
+  	<put-attribute name="title" value="Cart"/>
+  	<put-attribute name="content" value="/views/cart/index.jsp"/>
+  </definition>
+      <definition name="cart.checkout" extends="home">
+  	<put-attribute name="title" value="Cart"/>
+  	<put-attribute name="content" value="/views/cart/checkout.jsp"/>
+  </definition>
+  <definition name="cart.detail" extends="home">
+  	<put-attribute name="title" value="Cart Detail"/>
+  	<put-attribute name="content" value="/views/cart/detail.jsp"/>
+  </definition>
+  <definition name="order.index" extends="home">
+  	<put-attribute name="title" value="Order Index"/>
+  	<put-attribute name="content" value="/views/order/index.jsp"/>
+  </definition>
+  <definition name="publisher" extends="home">
+  	<put-attribute name="title" value="Publisher Index"/>
+  	<put-attribute name="content" value="/views/publisher/index.jsp"/>
+  </definition>
+</tiles-definitions>
